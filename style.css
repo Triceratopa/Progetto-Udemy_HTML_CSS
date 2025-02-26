@@ -1,0 +1,133 @@
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+}
+
+/*article header p {
+    font-style: italic; questo è un selettore discendente
+}*/
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+h1 {
+  font-size: 26px;
+
+  /*text-transform per far diventare un testo maiuscolo e altro*/
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+li {
+  /*normalmente le liste hanno un font-size di 16px*/
+
+  font-size: 20px;
+}
+
+p {
+  font-size: 22px;
+
+  /*spazziatura fra le rige line-height*/
+  line-height: 1.2;
+}
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 16px;
+}
+/*se seleziono un testo e premo cfontrol+/ farà commento in auto*/
+
+.relate-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related-post {
+  list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  /*border: 5px solid #1098ad;  border è una proprietà speciale
+  poichè accetta 3 proprietà*/
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+/*Usiamo le pseudo classi quando vogliamo prendere alcune parti
+senza utilizzare id o class.. per esempio per le liste:
+li:first-child{
+font-weight: bold;} in questo modo solo il primo punto
+di una lista risulterà in grassetto.
+Oppure last-child sarà l'ultimo. Se ci servono gli altri useremo
+nth-child() e dentro metteremo l'indicazione con numeri 
+per indicare quale evidenziamo, oppure anche delle parole
+per esempio odd prenderà solo i dispari (even per i pari)
+Questo viene usato soprattutto quando i componenti in questione sono tutti uguali*/
+
+/* scrivere solo a {} non è la pratica migliore, sempre
+meglio usare la pseudo-classe a:link*/
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+/*Buona prassi è anche quella di modificare i link già visitati che 
+di default cambiano colore dopo averci cliccato*/
+
+a:visited {
+  color: #1098ad; /*di solito si da lo stesso*/
+}
+
+/*:hover è una pseudo-class molto usata, che rappresenta
+lo stile di quell'elemento quando passiamo sopra con il
+mouse*/
+
+a:hover {
+  color: violet;
+  text-decoration: underline dotted purple; /*scegliamo
+  noi se dare 3 caratteristiche o no*/
+  font-weight: bold;
+}
+/*un'altra pseudo-class rappresenta lo stato dell'ancora
+quando è attiva, in pratica nel momento in cui clicchiamo, finchè
+non lasciamo il click*/
+
+a:active {
+  background-color: aquamarine;
+  font-style: italic;
+}
+/*La cosa ESSENZIALE è che questi stati siano sempre
+definiti in quest' ordine L(link), V(visited), H(hover),
+A(active) = LVHA*/
