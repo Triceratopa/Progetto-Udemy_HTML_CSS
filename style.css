@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0; /*si può usare il selettore universale
+  per eliminare tutto e avere carta bianca per impostare
+  da 0 le nostre preferenze*/
+}
+
 h1,
 h2,
 h3,
@@ -28,10 +35,13 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 h4 {
@@ -40,11 +50,27 @@ h4 {
   text-transform: uppercase;
   text-align: center;
 }
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 25px;
+}
 
 li {
   /*normalmente le liste hanno un font-size di 16px*/
 
   font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0; /*questo perchè di solito non si vuole
+  margine nell'ultima riga*/
 }
 
 p {
@@ -52,6 +78,7 @@ p {
 
   /*spazziatura fra le rige line-height*/
   line-height: 1.2;
+  margin-bottom: 15px;
 }
 
 #author {
@@ -75,6 +102,8 @@ p {
 
 .main-header {
   background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
 }
 
 aside {
@@ -83,6 +112,7 @@ aside {
   poichè accetta 3 proprietà*/
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
+  padding: 50px 0;
 }
 
 /*Usiamo le pseudo classi quando vogliamo prendere alcune parti
@@ -131,3 +161,10 @@ a:active {
 /*La cosa ESSENZIALE è che questi stati siano sempre
 definiti in quest' ordine L(link), V(visited), H(hover),
 A(active) = LVHA*/
+
+/*Riguardo selettori e ereditarietà, il selettore universale 
+no crea ereditarietà*/
+
+/*Padding
+se vogliamo mettere più valori ricordiamo che il primo rappresenta
+il padd in alto e in basso e il secondo sx-dx*/
